@@ -6,9 +6,21 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync");
+var pug = require('gulp-pug');
+ 
+
+gulp.task('pug', function buildHTML() {
+    return gulp.src('pug/pages/*.pug')
+    .pipe(plumber())
+    .pipe(pug({
+    // Your options in here.
+    }))    
+    .pipe(gulp.dest("."))
+    .pipe(gulp.dest("build"))
+});
 
 gulp.task("style", function() {
-  gulp.src("less/style.less")
+  gulp.src("static/less/style.less")
     .pipe(plumber())
     .pipe(less())
     .pipe(postcss([
@@ -32,6 +44,7 @@ gulp.task("serve", ["style"], function() {
     ui: false
   });
 
-  gulp.watch("less/**/*.less", ["style"]);
-  gulp.watch("*.html").on("change", server.reload);
+    gulp.watch("static/less/**/*.less", ["style"]);
+    gulp.watch("pug/**/*.pug", ["pug"]);
+    gulp.watch("*.html").on("change", server.reload);
 });

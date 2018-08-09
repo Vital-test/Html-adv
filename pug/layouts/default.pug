@@ -1,0 +1,23 @@
+include ../header
+include ../footer
+
+-const pageSettings = {}
+-pageSettings.title = '';
+-pageSettings.useSocialMetaTags = false;
+
+-const jv0 = 'javascript:void(0)';
+
+block vars
+
+doctype html
+html(lang='ru')
+    include ../head
+
+    body
+        +header()
+
+        block content
+
+        +footer()
+
+        //js
