@@ -1,6 +1,6 @@
-// тут можно заинклудить блоки
-
+include ./btn
+- var hi = "ggez"
 mixin header(data)
-    HEADER.header()&attributes(attributes)
-        // тут верстка или подключение блоков например - +btn
-         
+    HEADER.header()
+      DIV=hi
+      +btn(class="header__btn")      
