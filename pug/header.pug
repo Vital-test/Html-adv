@@ -1,6 +1,10 @@
-include ./btn
-- var hi = "ggez"
-mixin header(data)
-    HEADER.header()
-      DIV=hi
-      +btn(class="header__btn")      
+HEADER.header()
+  DIV.header__logo
+    A
+      IMG(src="" alt="mishka")   
+  NAV.header__menu-item
+    A.header__menu-toggle(href="#") Открыть меню
+    UL.header__menu-list
+      each link in ['Каталог товаров', 'Вязание на заказ', 'Поиск по сайту', 'Корзина: пока пуста']
+        LI
+          A(href ="#")= link

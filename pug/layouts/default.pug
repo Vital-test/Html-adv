@@ -1,6 +1,3 @@
-include ../header
-include ../footer
-
 -const pageSettings = {}
 -pageSettings.title = '';
 -pageSettings.useSocialMetaTags = false;
@@ -14,10 +11,8 @@ html(lang='ru')
     include ../head
 
     body
-        +header()
+        include ../header
 
         block content
-
-        +footer()
 
         //js
