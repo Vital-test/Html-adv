@@ -1,5 +1,5 @@
 include ../header
-include ../footer
+include ../page-footer
 
 -const pageSettings = {}
 -pageSettings.title = '';
@@ -14,10 +14,9 @@ html(lang='ru')
     include ../head
 
     body
-        +header()
-
-        block content
-
-        +footer()
+      +header
+      block content
+      +page-footer
+        
 
         //js

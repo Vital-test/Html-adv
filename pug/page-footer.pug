@@ -1,0 +1,14 @@
+mixin page-footer
+  - var socs = [{atr:'page-footer__social-link--insta', text:'Мы в инстаграмме', ref:'#'}, {atr:'page-footer__social-link--fb', text:'Мы в фейсбуке', ref:'#'}, {atr:'page-footer__social-link--twit', text:'Мы в твитере', ref:'#'}];
+
+  FOOTER.page-footer
+    A.page-footer__logo
+      IMG(src='#' alt='')
+
+    .page-footer__social
+      each link in socs
+        A.page-footer__social-link(href=link.ref class=link.atr)= link.text
+
+    .page-footer__copyright
+        A(href='#') Разработано
+          IMG(src='#')
