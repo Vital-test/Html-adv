@@ -1,7 +1,8 @@
-- var offers_link = [{ref:'interier.html', text:'Предметы интерьера'}, {ref:'kids-toys.html', text:'Детские игрушки'}];
-.offers
-  H2.offers__title Милые штуки ручной работы для дома
-  UL.offers__list
-    each link in offers_link
-      LI.offers__item
-        A(href = link.ref)= link.text
+mixin offers
+  - var offers_link = [{ref:'interier.html', text:'Предметы интерьера'}, {ref:'kids-toys.html', text:'Детские игрушки'}];
+  .offers
+    H2.offers__title Милые штуки ручной работы для дома
+    UL.offers__list
+      each link in offers_link
+        LI.offers__item
+          A(href = link.ref)= link.text

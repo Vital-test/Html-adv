@@ -1,9 +1,18 @@
 extends ../layouts/default
 
-include ../btn
+include ../offers
+include ../weeks-product
+include ../about
+include ../reviews
+include ../contacts
 
 block vars
-    -pageSettings.title = 'Главная'; 
+  -pageSettings.title = 'Главная'; 
     
 block content    
-    H1 Tекст заголовка
+  +offers
+  +weeks-product
+  +about
+  +reviews
+  +contacts
+        

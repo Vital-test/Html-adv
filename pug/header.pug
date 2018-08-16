@@ -1,24 +1,25 @@
-- var menu = [{ref:'catalog.html', text:'Каталог товаров'}, {ref:'form.html', text:'Вязание на заказ'}, {ref:'search.html', text:'Поиск по сайту'}, {ref:'buy.html', text:'Корзина: пока пуста'}];
-- var menu_other = [{ref:'new-comes.html', text:'Новые поступления'}, {ref:'sell.html', text:'Распродажа'},{ref:'free-send.html',text:'Бесплатная доставка по России'}];
-HEADER.header()
-  DIV.header__logo
-    A
-      IMG(src="" alt="mishka")   
+mixin header
+  - var menu = [{ref:'catalog.html', text:'Каталог товаров'}, {ref:'form.html', text:'Вязание на заказ'}, {ref:'search.html', text:'Поиск по сайту'}, {ref:'buy.html', text:'Корзина: пока пуста'}];
+  - var menu_other = [{ref:'new-comes.html', text:'Новые поступления'}, {ref:'sell.html', text:'Распродажа'},{ref:'free-send.html',text:'Бесплатная доставка по России'}];
+  HEADER.header()
+    DIV.header__logo
+      A
+        IMG(src="" alt="mishka")   
 
-  NAV.header__menu-item
-    A.header__menu-toggle(href="#") Открыть меню
+    NAV.header__menu-item
+      A.header__menu-toggle(href="#") Открыть меню
 
-    UL.header__menu-list
-      each link in menu
-        LI.header__menu-item
-          A(href = link.ref)= link.text
-
-    UL.header__menu-other-list
-      each link, index in menu_other
-        if index == 2 
-          LI.header__menu-item-other.header__menu-item-other--hidden.header__menu-item-other--font-other
+      UL.header__menu-list
+        each link in menu
+          LI.header__menu-item
             A(href = link.ref)= link.text
-        else
-          LI.header__menu-item-other.header__menu-item-other--hidden
-            A(href = link.ref)= link.text
+
+      UL.header__menu-other-list
+        each link, index in menu_other
+          if index == 2 
+            LI.header__menu-item-other.header__menu-item-other--hidden.header__menu-item-other--font-other
+              A(href = link.ref)= link.text
+          else
+            LI.header__menu-item-other.header__menu-item-other--hidden
+              A(href = link.ref)= link.text
           

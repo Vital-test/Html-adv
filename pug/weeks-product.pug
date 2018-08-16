@@ -1,14 +1,16 @@
-- var values = [{name:'Цвет:', value:'&laqou;Тифани&raqou;/серый'}, {name:'Диаметр:', value:'25 см'}, {name:'Высота', value:'15 см'}];
-.weeks-product
-  span.weeks-product__mark Товар недели
-  H2.weeks-product__title Вязаные корзинки
-  P.weeks-product__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах
-  TABLE.weeks-product__properties
-    each row in values
-      TR
-        TD.weeks-product__name= row.name
-        TD.weeks-product__value= row.value
-  IMG(src="#" alt="Вязаные корзинки")
-  .order
-    SPAN.order__price Цена: 990 руб.
-    A.order__btn.btn(href="#") Заказать
+mixin weeks-product
+  include btn
+  - var values = [{name:'Цвет:', value:'&laqou;Тифани&raqou;/серый'}, {name:'Диаметр:', value:'25 см'}, {name:'Высота', value:'15 см'}];
+  .weeks-product
+    span.weeks-product__mark Товар недели
+    H2.weeks-product__title Вязаные корзинки
+    P.weeks-product__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах
+    TABLE.weeks-product__properties
+      each row in values
+        TR
+          TD.weeks-product__name= row.name
+          TD.weeks-product__value= row.value
+    IMG(src="#" alt="Вязаные корзинки")
+    .order
+      SPAN.order__price Цена: 990 руб.
+      +btn('#','order__btn','Заказать')
