@@ -1,0 +1,13 @@
+mixin catalog-item(data)
+
+  .catalog-item
+    IMG(src=data.source, alt=data.alter)
+
+    .catalog-item__about
+      H3(class='catalog-item__title')&attributes(attributes)= data.title
+
+      SPAN(class='catalog-item__details')&attributes(attributes)= data.details
+   
+    .catalog-item__price
+      B.catalog-item__price-value= data.price
+      IMG(src='#')

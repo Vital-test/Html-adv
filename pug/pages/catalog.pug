@@ -1,0 +1,14 @@
+extends ../layouts/default
+
+include ../page-title
+include ../catalog-list
+include ../process
+
+block vars
+  -pageSettings.title = 'Каталог';
+
+block content
+  +page-title
+    | Каталог товаров
+  +catalog-list
+  +process
