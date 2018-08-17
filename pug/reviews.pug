@@ -11,4 +11,5 @@ mixin reviews
       
     BUTTON.reviews__prev(type='button')
     BUTTON.reviews__next(type='button')
-    +btn('#','reviews__write','Написать')
+    +btn({href:'#'}).reviews__write
+      | Написать

@@ -11,6 +11,7 @@ mixin weeks-product
           TD.weeks-product__name= row.name
           TD.weeks-product__value= row.value
     IMG(src="#" alt="Вязаные корзинки")
-    .order
-      SPAN.order__price Цена: 990 руб.
-      +btn('#','order__btn','Заказать')
+    .weeks-product__order
+      SPAN.weeks-product__price Цена: 990 руб.
+      +btn({href:'#'}).weeks-product__btn
+        | Заказать

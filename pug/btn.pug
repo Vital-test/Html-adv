@@ -1,2 +1,3 @@
-mixin btn(href,cls,text)
-  A.btn(href=href, class=cls)= text
+mixin btn(data)
+  A.btn(href=data.href)&attributes(attributes)
+    block
