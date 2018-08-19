@@ -1,0 +1,12 @@
+extends ../layouts/default
+
+include ../page-title
+include ../order
+
+block vars
+  -pageSettings.title = 'Вязание на заказ'; 
+    
+block content    
+  +page-title
+    | Вязание на заказ
+  +order

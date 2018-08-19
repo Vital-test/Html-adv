@@ -1,0 +1,20 @@
+mixin order
+
+  -var it_type = [{id:'access',lab:'Аксессуар для интерьера'},{id:'toy',lab:'Детская игрушка'}];
+
+  -var it_color = [{id:'white',lab:'Белый'},{id:'grey',lab:'Серый'},{id:'tiffany',lab:'&laquo;Тиффани&raquo;'},{id:'black',lab:'Черный'},{id:'pink',lab:'Розовый'},{id:'orange',lab:'Оранжевый'}];
+
+  FORM.order
+    P.order-about Мы будем рады воплотить в жизнь ваши пожелания!<br>Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+
+    .order__type
+      SPAN Тип
+      each item in it_type
+        label(for=item.id)= item.lab
+        input(type='radio', name='type', value= item.id, id= item.id)
+
+    .order__color
+      SPAN Цвет
+      each item in it_color
+        label(for=item.id)= item.lab
+        input(type='checkbox', name='color', value= item.id , id= item.id)
