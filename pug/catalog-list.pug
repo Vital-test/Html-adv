@@ -5,5 +5,6 @@ mixin catalog-list
   -var cat_list = [{src:'1',alth1:'Зайчик-попрыгайчик',det:'Рост 30 см, вес 200 г',prc:'1 200 руб.'},{src:'2',alth1:'Корзинка для белья',det:'Диаметр 15 см, высота 10 см',prc:'690 руб.'},{src:'3',alth1:'Большая корзинка для игрушек',det:'Диаметр 30 см, высота 30 см',prc:'1 500 руб.'}];
 
   .catalog-list
-    each catitem in cat_list
-      +catalog-item({source:catitem.src,alter:catitem.alth1,title:catitem.alth1,details:catitem.det,price:catitem.prc})
+    .content
+      each catitem in cat_list
+        +catalog-item({source:catitem.src,alter:catitem.alth1,title:catitem.alth1,details:catitem.det,price:catitem.prc})

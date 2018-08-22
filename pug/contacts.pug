@@ -1,17 +1,18 @@
 mixin contacts
   .contacts
-    H2.contacts__title Контакты
-    IMG(src='#' alt='')
+    .content
+      H2.contacts__title Контакты
+      IMG(src='#' alt='')
 
-    .contacts__mail
-      SPAN e-mail:
-      A(href='mailto:info@mimimishkashop.ru') info@mimimishkashop.ru
+      .contacts__mail
+        SPAN e-mail:
+        A(href='mailto:info@mimimishkashop.ru') info@mimimishkashop.ru
 
-    .contacts__address
-      SPAN адрес:
-      P  г.Санкт-Петербург <BR>ул. Большая Конюшенная, <BR>д. 19/8, офис 101
+      .contacts__address
+        SPAN адрес:
+        P  г.Санкт-Петербург <BR>ул. Большая Конюшенная, <BR>д. 19/8, офис 101
 
-    .contacts__map
+      .contacts__map
 
-    +btn({href:'#'}).contacts__btn
-      | Напишите нам
+      +btn({href:'#'}).contacts__btn
+        | Напишите нам
