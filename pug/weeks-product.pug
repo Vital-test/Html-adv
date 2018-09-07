@@ -1,6 +1,6 @@
 mixin weeks-product
   include btn
-  - var values = [{name:'Цвет:', value:'&laqou;Тифани&raqou;/серый'}, {name:'Диаметр:', value:'25 см'}, {name:'Высота', value:'15 см'}];
+  - var values = [{name:'Цвет:', value:'&laquo;Тифани&raquo;/серый'}, {name:'Диаметр:', value:'25 см'}, {name:'Высота', value:'15 см'}];
   .weeks-product
     .content
       H2.weeks-product__title Вязаные корзинки
@@ -10,8 +10,8 @@ mixin weeks-product
         each row in values
           TR
             TD.weeks-product__name= row.name
-            TD.weeks-product__value= row.value
-      IMG(src="#" alt="Вязаные корзинки")
+            TD.weeks-product__value!= row.value
+      IMG(src="../static/img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки")
       .weeks-product__order
         SPAN.weeks-product__price Цена: 990 руб.
         +btn({href:'#'}).weeks-product__btn
