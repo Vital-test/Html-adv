@@ -1,4 +1,14 @@
 .content {
 	min-width: 260px;
-	margin: 0 30px;
+	margin: 0;
+
+	@media @tablet-widths {
+		min-width: 670px;
+		margin: 0 30px;
+	}
+
+	@media @desktop-widths {
+		min-width: 1050px;
+		margin: 0 30px;
+	}
 }

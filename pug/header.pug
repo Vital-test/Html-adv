@@ -1,5 +1,5 @@
 mixin header
-  - var menu = [{ref:'catalog.html', text:'Каталог товаров'}, {ref:'form.html', text:'Вязание на заказ'}, {ref:'search.html', text:'Поиск по сайту'}, {ref:'buy.html', text:'Корзина: пока пуста'}];
+  - var menu = [{ref:'catalog.html', text:'Каталог товаров', icon:''}, {ref:'form.html', text:'Вязание на заказ', icon:''}, {ref:'search.html', text:'Поиск по сайту', icon:'../static/img/icon-search.svg'}, {ref:'buy.html', text:'Корзина: пока пуста', icon:'../static/img/icon-cart.svg'}];
   - var menu_other = [{ref:'new-comes.html', text:'Новые поступления'}, {ref:'sell.html', text:'Распродажа'},{ref:'free-send.html',text:'Бесплатная доставка по России'}];
   HEADER.header()
     .content
@@ -7,13 +7,20 @@ mixin header
         A
           IMG(src="../static/img/logo-mobile.svg" alt="mishka")   
 
-      NAV.header__menu
+      NAV.header__menu.header__menu--closed
         A.header__menu-toggle(href="#") Открыть меню
 
         UL.header__menu-list
-          each link in menu
-            LI.header__menu-item
-              A(href = link.ref)= link.text
+          each link, index in menu
+            if index <= 1
+              LI.header__menu-item
+                A(href = link.ref)= link.text
+            else 
+              LI.header__menu-item
+                A(href = link.ref)
+                  IMG(src = link.icon)= link.text
+                    
+                  
 
         UL.header__menu-other-list
           each link, index in menu_other
