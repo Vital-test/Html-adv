@@ -7,17 +7,17 @@ mixin header
         A
           IMG(src="../static/img/logo-mobile.svg" alt="mishka")   
 
-      NAV.header__menu.header__menu--opened.header__menu--nojs
+      NAV.header__menu.header__menu--closed.header__menu--nojs
         A.header__menu-toggle(href="#") Открыть меню
 
         UL.header__menu-list.flexed
           each link, index in menu
             if index <= 1
-              LI.header__menu-item
-                A(href = link.ref)= link.text
+              LI
+                A.header__menu-item(href = link.ref)= link.text
             else 
-              LI.header__menu-item
-                A(href = link.ref)
+              LI
+                A.header__menu-item(href = link.ref)
                   IMG(src = link.icon)= link.text
                     
                   
@@ -25,9 +25,9 @@ mixin header
         UL.header__menu-other-list
           each link, index in menu_other
             if index == 2 
-              LI.header__menu-item-other.header__menu-item-other--hidden.header__menu-item-other--font-other
-                A(href = link.ref)= link.text
+              LI
+                A.header__menu-item-other.header__menu-item-other--hidden.header__menu-item-other--font-other(href = link.ref)= link.text
             else
-              LI.header__menu-item-other.header__menu-item-other--hidden
-                A(href = link.ref)= link.text
+              LI
+                A.header__menu-item-other.header__menu-item-other--hidden(href = link.ref)= link.text
             
