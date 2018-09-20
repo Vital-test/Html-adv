@@ -21,7 +21,10 @@ mixin header
             else
               LI
                 A.header__menu-logo(href = link.ref)
-                  IMG(src = link.icon)
+                  PICTURE
+                    SOURCE(media = "(min-width: 1200px)" srcset = "../static/img/logo-desktop.png")
+                    SOURCE(media = "(min-width: 768px)" srcset = "../static/img/logo-tablet.png")
+                    IMG(src = link.icon)
                     
                   
 
