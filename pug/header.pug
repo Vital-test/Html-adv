@@ -1,5 +1,5 @@
 mixin header
-  - var menu = [{ref:'index.html', text:'', icon:'../static/img/logo-mobile.svg'}, {ref:'catalog.html', text:'Каталог товаров', icon:''}, {ref:'form.html', text:'Вязание на заказ', icon:''}, {ref:'search.html', text:'Поиск по сайту', icon:'../static/img/icon-search.svg'}, {ref:'buy.html', text:'Корзина: пока пуста', icon:'../static/img/icon-cart.svg'}];
+  - var menu = [{ref:'index.html', text:'', icon:'../static/img/logo-mobile.svg', itemName: ''}, {ref:'catalog.html', text:'Каталог товаров', icon:'', itemName:'header__menu-item-catalog'}, {ref:'form.html', text:'Вязание на заказ', icon:'', itemName:'header__menu-item-order'}, {ref:'search.html', text:'Поиск по сайту', icon:'../static/img/icon-search.svg', itemName:'header__menu-item-search'}, {ref:'buy.html', text:'Корзина: пока пуста', icon:'../static/img/icon-cart.svg', itemName:'header__menu-item-cart'}];
   - var menu_other = [{ref:'new-comes.html', text:'Новые поступления'}, {ref:'sell.html', text:'Распродажа'},{ref:'free-send.html',text:'Бесплатная доставка по России'}];
   HEADER.header()
     .content.header__wrap
@@ -10,13 +10,13 @@ mixin header
           each link, index in menu
             if index > 0 && index < 3
               LI
-                A.header__menu-item(href = link.ref)
+                A.header__menu-item(href = link.ref class = link.itemName)
                   SPAN.header__menu-item-text= link.text
             else if index > 2
               LI
-                A.header__menu-item(href = link.ref)
+                A.header__menu-item(href = link.ref class = link.itemName)
                   SPAN.header__menu-item-text
-                    IMG.header__menu-icon(src = link.icon)= link.text
+                    IMG.header__menu-item-icon(src = link.icon)= link.text
                      
             else
               LI
