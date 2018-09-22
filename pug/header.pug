@@ -1,6 +1,6 @@
 mixin header
   - var menu = [{ref:'index.html', text:'', icon:'../static/img/logo-mobile.svg', itemName: ''}, {ref:'catalog.html', text:'Каталог товаров', icon:'', itemName:'header__menu-item-catalog'}, {ref:'form.html', text:'Вязание на заказ', icon:'', itemName:'header__menu-item-order'}, {ref:'search.html', text:'Поиск по сайту', icon:'../static/img/icon-search.svg', itemName:'header__menu-item-search'}, {ref:'buy.html', text:'Корзина: пока пуста', icon:'../static/img/icon-cart.svg', itemName:'header__menu-item-cart'}];
-  - var menu_other = [{ref:'new-comes.html', text:'Новые поступления'}, {ref:'sell.html', text:'Распродажа'},{ref:'free-send.html',text:'Бесплатная доставка по России'}];
+  - var menu_other = [{ref:'new-comes.html', text:'Новые поступления', itemName:'header__other-item-news'}, {ref:'sell.html', text:'Распродажа', itemName:'header__other-item-sell'},{ref:'free-send.html',text:'Бесплатная доставка по России', itemName:'header__other-item-free'}];
   HEADER.header()
     .content.header__wrap
       NAV.header__menu.header__menu--closed.header__menu--nojs
@@ -28,8 +28,8 @@ mixin header
                     
                   
 
-        UL.header__menu-other-list
+        UL.header__other-list
           each link in menu_other
             LI
-              A.header__menu-item-other(href = link.ref)= link.text
+              A.header__other-item(href = link.ref class = link.itemName)= link.text
           
