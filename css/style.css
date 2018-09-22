@@ -328,8 +328,9 @@ template {
 }
 @media (min-width: 1200px) {
   .content {
-    min-width: 1050px;
-    margin: 0 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
   }
 }
 .flexed {
@@ -524,11 +525,12 @@ template {
   }
   .header__menu-list li:first-child {
     display: flex;
-    order: 3;
     width: auto;
+    margin-right: auto;
+    order: 3;
   }
   .header__menu-list li:nth-child(3) {
-    margin-left: 0;
+    margin-right: auto;
     order: 2;
   }
   .header__menu-list li:nth-child(4) {
@@ -560,6 +562,9 @@ template {
   }
   .header__menu-item-search {
     padding: 33px 40.5px;
+  }
+  .header__menu-item-cart {
+    padding-left: 30px;
   }
 }
 .offers {
