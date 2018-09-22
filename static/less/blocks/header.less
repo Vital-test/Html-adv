@@ -201,6 +201,7 @@
       display: flex;
       width: auto;
       margin-right: auto;
+      margin-left: -40px;
       order: 3;
     }
     & li:nth-child(3){
@@ -226,13 +227,19 @@
     top: 0;
     left: 0;
     padding-right: 35px;
+    span {
+      font-size: 16px;
+    }
   }
   &-order {
     position: relative;
     top: 0;
     left: 0;
-    padding-left: 35px;
+    padding-left: 33px;
     border-left: 1px solid #ebebeb;
+    span {
+      font-size: 16px;
+    }
   }
   &-search {
     padding: 33px 40.5px;
@@ -241,4 +248,15 @@
     padding-left: 30px;
   }
  }
+  .header__other-list {
+    li:nth-child(2) {
+      margin-right: auto;
+      margin-left: 58px;
+    }
+   .header__other-item {
+    display: flex;
+    margin-top: 19px;
+    font-size: 14px;
+   }
+  }
 }
