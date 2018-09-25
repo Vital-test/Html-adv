@@ -68,7 +68,7 @@
 }
 
 .header__menu-logo {
-  padding: 18.5px 0;
+  padding: 17.5px 0;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #ebebeb;
@@ -81,17 +81,34 @@
   font-size: 16px;
   line-height: 24px;
   border-bottom: 1px solid #ebebeb;
+  &-search {
+    span {
+      padding-left: 25px;
+    }
+    svg {
+      margin-top: 2.5px;
+      margin-left: 42px;
+      min-width: 17.6px;
+      min-height: 17.6px;
+    }
+  }
+  &-cart {
+    span {
+      padding-left: 25px;
+    }
+    svg {
+      margin-left: 40px;
+      min-width: 20.294px;
+      min-height: 18.849px;
+    }
+  }
 }
 .header__menu-item-text {
   position: relative;
   display: inline-block;
   min-width: 250px;
   padding-left: 85px;
-}
-.header__menu-item-icon {
-  position: absolute;
-  top: 3px;
-  left: 35px;
+  order: 2;
 }
 
 .header__other-list {
@@ -112,7 +129,7 @@
 @media @tablet-widths {
   .header {
     max-width: 100%;
-    height: 89px;
+    height: 88px;
     border-bottom: 1px solid #ebebeb;
     margin-bottom: 100px;
   }
@@ -123,7 +140,7 @@
   .header__menu-list {
     & li:first-child {
       display: flex;
-      width: 48%;
+      width: 47%;
     }
     & li:last-child {
       display: flex;
@@ -133,9 +150,26 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
-  
+  .header__menu-logo {
+    &:hover {
+      opacity: .6;
+    }
+    &:active {
+      opacity: .2;
+    }
+  }
   .header__menu-item {
     border: none;
+    &:hover span {
+      opacity: .6;
+    }
+    &:hover svg path {
+      fill-opacity: 1;
+      fill: #63d1bb;
+    }
+    &:active span {
+      opacity: .2;
+    } 
     &-catalog {
       position: absolute;
       top: 110px;
@@ -149,25 +183,26 @@
       padding: 0;
     }
     &-search {
-      padding: 33px 40.5px;
+      padding: 32px;
       border-left: 1px solid #ebebeb;
       border-right: 1px solid #ebebeb;
-      img {
-        left: -8px;
+      svg {
+        margin-left: 0;
       }
       span {
+        padding-left: 0;
         font-size: 0;
       }
     }
     &-cart {
-      padding: 33px 0;
+      padding: 32px 0;
       padding-left: 30px;
       span {
+        padding-left: 0;
         font-size: 16px;
       }
-      img {
-        position: relative;
-        left: 0;
+      svg {
+        margin-left: 0;
         margin-right: 25px;
       }
     }
@@ -242,7 +277,7 @@
     }
   }
   &-search {
-    padding: 33px 40.5px;
+    padding: 32px;
   }
   &-cart {
     padding-left: 30px;
@@ -257,6 +292,15 @@
     display: flex;
     margin-top: 19px;
     font-size: 14px;
+    &-news,
+    &-sell {
+      &:hover {
+        opacity: .6;
+      }
+      &:active {
+        opacity: .3;
+      }
+    }
    }
   }
 }
