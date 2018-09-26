@@ -338,7 +338,7 @@ template {
   flex-direction: column;
 }
 .header {
-  min-height: 80px;
+  min-height: 78px;
   min-width: 320px;
   font-size: 16px;
   font-family: VerdanaBold;
@@ -625,7 +625,8 @@ template {
   }
 }
 .offers {
-  height: 506px;
+  position: relative;
+  height: 453px;
   min-width: 320px;
   padding-top: 67px;
   font-family: VerdanaBold;
@@ -648,25 +649,64 @@ template {
   line-height: 30px;
 }
 .offers__list {
+  display: flex;
+  flex-direction: column;
   min-width: 320px;
   list-style-type: none;
   padding: 0;
 }
 .offers__list a {
   text-decoration: none;
-  color: #000;
-  padding: 30px;
+  color: #fff;
+  -ms-grid-row-align: center;
+      align-items: center;
 }
 .offers__item-interier {
   display: flex;
   justify-content: space-between;
+  padding: 20.5px 35px 20.5px 30px;
   background-color: #63d1bb;
 }
 .offers__item-interier svg path {
   fill: #3bb09d;
 }
+.offers__item-toys {
+  display: flex;
+  justify-content: space-between;
+  padding: 22px 35px 22px 30px;
+  background-color: #56c3b2;
+}
+.offers__item-toys svg path {
+  fill: #35a999;
+}
 .offers__item-text {
   width: 100px;
+  line-height: 24px;
+}
+@media (min-width: 768px) {
+  .offers {
+    height: 745px;
+    padding-top: 130px;
+    background: url(../static/img/hero-desktop.jpg) no-repeat 50% 0;
+  }
+  .offers__title-text {
+    width: 500px;
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .offers__list {
+    flex-direction: row;
+  }
+  .offers__item {
+    width: 50%;
+  }
+  .zigzag {
+    position: absolute;
+    bottom: 0;
+  }
+  .zigzag img {
+    width: 100%;
+  }
 }
 .weeks-product {
   font-size: 14px;
