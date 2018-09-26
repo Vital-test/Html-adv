@@ -494,6 +494,10 @@ template {
   .header__menu-item:active span {
     opacity: .2;
   }
+  .header__menu-item:active svg path {
+    fill-opacity: .3;
+    fill: #63d1bb;
+  }
   .header__menu-item-catalog {
     position: absolute;
     top: 110px;
