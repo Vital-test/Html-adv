@@ -1,7 +1,50 @@
 .offers {
 	height: 506px;
 	min-width: 320px;
+	padding-top: 67px;
 	font-family: VerdanaBold;
-	background: url(../static/img/hero-mobile@1x.jpg) no-repeat;
-	background-position: center;
+	background: url(../static/img/hero-mobile@1x.jpg) no-repeat 50% 0;
+}
+
+.offers__wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+.offers__title {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	&-text {
+		width: 240px;
+		text-align: center;
+		line-height: 30px;
+	}
+}
+
+.offers__list {
+	min-width: 320px;
+	list-style-type: none;
+	padding: 0;
+	a {
+		text-decoration: none;
+		color: #000;
+		padding: 30px;
+	}
+}
+
+.offers__item {
+	&-interier {
+		display: flex;
+		justify-content: space-between;
+		background-color: #63d1bb;
+		svg path {
+			fill: #3bb09d;
+		}
+	}
+	&-text {
+		width: 100px;
+	}
 }

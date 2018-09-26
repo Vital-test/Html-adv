@@ -3,7 +3,7 @@ mixin header
   
   - var menu_other = [{ref:'new-comes.html', text:'Новые поступления', itemName:'header__other-item-news'}, {ref:'sell.html', text:'Распродажа', itemName:'header__other-item-sell'},{ref:'free-send.html',text:'Бесплатная доставка по России', itemName:'header__other-item-free'}];
   HEADER.header()
-    .content.header__wrap
+    .content
       NAV.header__menu.header__menu--closed.header__menu--nojs
         A.header__menu-toggle(href="#") Открыть меню
 
