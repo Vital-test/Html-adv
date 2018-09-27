@@ -338,6 +338,7 @@ template {
   flex-direction: column;
 }
 .header {
+  position: relative;
   min-height: 78px;
   min-width: 320px;
   font-size: 16px;
@@ -345,6 +346,7 @@ template {
   line-height: 24px;
   color: #000;
   background: #fff;
+  z-index: 2;
 }
 .header__menu-list,
 .header__other-list {
@@ -631,6 +633,7 @@ template {
   padding-top: 67px;
   font-family: VerdanaBold;
   background: url(../static/img/hero-mobile@1x.jpg) no-repeat 50% 0;
+  background-color: #f9f9f9;
 }
 .offers__wrap {
   display: flex;
@@ -685,9 +688,10 @@ template {
 }
 @media (min-width: 768px) {
   .offers {
-    height: 745px;
+    height: 623px;
     padding-top: 130px;
     background: url(../static/img/hero-desktop.jpg) no-repeat 50% 0;
+    background-color: #f9f9f9;
   }
   .offers__title-text {
     width: 500px;
@@ -696,16 +700,63 @@ template {
   }
   .offers__list {
     flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 810px;
+    margin: 0 auto;
   }
   .offers__item {
     width: 50%;
   }
-  .zigzag {
-    position: absolute;
-    bottom: 0;
+  .offers__item-interier {
+    padding-bottom: 25px;
+    transition: all 0.2s ease-out;
   }
-  .zigzag img {
-    width: 100%;
+  .offers__item-interier:hover {
+    margin-top: -5px;
+    padding-bottom: 30px;
+    background-color: #58d5bc;
+  }
+  .offers__item-interier:hover svg path {
+    fill: #28a591;
+  }
+  .offers__item-interier:active span,
+  .offers__item-interier:active svg path {
+    opacity: .3;
+  }
+  .offers__item-toys {
+    padding-bottom: 26.5px;
+    transition: all 0.2s ease-out;
+  }
+  .offers__item-toys:hover {
+    margin-top: -5px;
+    padding-bottom: 31.5px;
+    background-color: #45c1ae;
+  }
+  .offers__item-toys:hover svg path {
+    fill: #229f8d;
+  }
+  .offers__item-toys:active span,
+  .offers__item-toys:active svg path {
+    opacity: .3;
+  }
+  .zigzag {
+    display: block;
+    margin-top: -15px;
+    overflow: hidden;
+  }
+}
+@media (min-width: 1150px) {
+  .offers {
+    padding-top: 133px;
+  }
+  .offers__title-text {
+    width: 625px;
+    font-size: 50px;
+    line-height: 57px;
+  }
+  .offers__list {
+    max-width: 1150px;
   }
 }
 .weeks-product {
