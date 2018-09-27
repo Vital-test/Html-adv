@@ -337,6 +337,17 @@ template {
   display: flex;
   flex-direction: column;
 }
+.btn {
+  max-width: 85px;
+  padding: 16px 85px 18px 85px;
+  font-family: OpensansBold;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #444444;
+  border: 2px solid #434343;
+}
 .header {
   position: relative;
   min-height: 78px;
@@ -628,7 +639,7 @@ template {
 }
 .offers {
   position: relative;
-  height: 453px;
+  height: 440px;
   min-width: 320px;
   padding-top: 67px;
   font-family: VerdanaBold;
@@ -655,6 +666,7 @@ template {
   display: flex;
   flex-direction: column;
   min-width: 320px;
+  margin: 0;
   list-style-type: none;
   padding: 0;
 }
@@ -667,7 +679,7 @@ template {
 .offers__item-interier {
   display: flex;
   justify-content: space-between;
-  padding: 20.5px 35px 20.5px 30px;
+  padding: 20.5px 36px 20.5px 30px;
   background-color: #63d1bb;
 }
 .offers__item-interier svg path {
@@ -676,7 +688,7 @@ template {
 .offers__item-toys {
   display: flex;
   justify-content: space-between;
-  padding: 22px 35px 22px 30px;
+  padding: 22px 27px 22px 30px;
   background-color: #56c3b2;
 }
 .offers__item-toys svg path {
@@ -686,9 +698,12 @@ template {
   width: 100px;
   line-height: 24px;
 }
+.zigzag {
+  display: none;
+}
 @media (min-width: 768px) {
   .offers {
-    height: 623px;
+    height: 616px;
     padding-top: 130px;
     background: url(../static/img/hero-desktop.jpg) no-repeat 50% 0;
     background-color: #f9f9f9;
@@ -704,12 +719,14 @@ template {
     width: 100%;
     max-width: 810px;
     margin: 0 auto;
+    margin-bottom: -7px;
   }
   .offers__item {
     width: 50%;
   }
   .offers__item-interier {
     padding-bottom: 25px;
+    padding-left: 36px;
     transition: all 0.2s ease-out;
   }
   .offers__item-interier:hover {
@@ -725,7 +742,9 @@ template {
     opacity: .3;
   }
   .offers__item-toys {
+    padding-right: 34px;
     padding-bottom: 26.5px;
+    padding-left: 36px;
     transition: all 0.2s ease-out;
   }
   .offers__item-toys:hover {
@@ -760,11 +779,89 @@ template {
   }
 }
 .weeks-product {
+  padding-left: 30px;
+  padding-right: 30px;
+  margin-bottom: 33px;
   font-size: 14px;
   line-height: 24px;
   font-family: opensans;
   color: #000;
   background: #fff;
+}
+.weeks-product__wrap {
+  width: 260px;
+  margin: 0 auto;
+}
+.weeks-product__head {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+.weeks-product__head-title {
+  width: 265px;
+  margin: 10px 0;
+  font-family: VerdanaBold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.weeks-product__head-mark {
+  width: 130px;
+  font-family: OpensansBold;
+  font-size: 16px;
+  line-height: 16px;
+  color: #63d1bb;
+  text-transform: uppercase;
+}
+.weeks-product__properties {
+  width: 260px;
+  margin-bottom: 25px;
+}
+.weeks-product__properties tr {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 6px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ececec;
+}
+.weeks-product__properties-name {
+  width: 62px;
+  margin-right: 27px;
+}
+.weeks-product__order {
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+}
+.weeks-product__order-price {
+  min-width: 140px;
+  margin: 0 auto;
+  margin-bottom: 27px;
+  font-family: VerdanaBold;
+  font-size: 16px;
+  color: #444444;
+}
+@media (min-width: 768px) {
+  .weeks-product {
+    padding: 0;
+  }
+  .weeks-product__wrap {
+    width: auto;
+    min-width: 670px;
+    margin: 0 50px;
+  }
+  .weeks-product__head {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .weeks-product__head-mark {
+    width: 70px;
+    text-align: center;
+  }
+  .weeks-product__text {
+    width: 260px;
+  }
 }
 .about {
   font-size: 16px;

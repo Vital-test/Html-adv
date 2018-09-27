@@ -1,7 +1,90 @@
 .weeks-product {
+	padding-left: 30px;
+	padding-right: 30px;
+	margin-bottom: 33px;
 	font-size: 14px;
 	line-height: 24px;
 	font-family: opensans;
     color: #000;
     background: #fff;
+    &__wrap {
+    	width: 260px;
+    	margin: 0 auto;
+    }
+}
+
+.weeks-product__head {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 25px;
+	&-title {
+    	width: 265px;
+		margin: 10px 0;
+		font-family: VerdanaBold;
+		font-size: 24px;
+		line-height: 30px;
+    }
+    &-mark {
+    	width: 130px;
+    	font-family: OpensansBold;
+    	font-size: 16px;
+    	line-height: 16px;
+    	color: #63d1bb;
+    	text-transform: uppercase;
+
+    }
+}
+
+.weeks-product__properties {
+	width: 260px;
+	margin-bottom: 25px;
+	tr {
+		display: flex;
+		align-items: flex-start;
+		padding-top: 6px;
+		padding-bottom: 8px;
+		border-bottom: 1px solid #ececec;
+	}
+	&-name {
+		width: 62px;
+		margin-right: 27px;
+	}
+}
+
+.weeks-product__order {
+	display: flex;
+	flex-direction: column;
+	margin-top: 22px;
+	&-price {
+		min-width: 140px;
+		margin: 0 auto;
+		margin-bottom: 27px;
+		font-family: VerdanaBold;
+		font-size: 16px;
+		color: #444444;
+	}
+}
+
+@media @tablet-widths {
+	.weeks-product {
+		padding: 0;
+		&__wrap {
+			width: auto;
+			min-width: 670px;
+			margin: 0 50px;
+		}
+	}
+	.weeks-product__head {
+		width: 100%;
+		flex-direction: row;
+		justify-content: space-between;
+		&-mark {
+			width: 70px;
+			text-align: center;
+		}
+	}
+	.weeks-product__text {
+		width: 260px;
+	}
 }
