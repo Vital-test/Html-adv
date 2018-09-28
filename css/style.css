@@ -337,17 +337,6 @@ template {
   display: flex;
   flex-direction: column;
 }
-.btn {
-  max-width: 85px;
-  padding: 16px 85px 18px 85px;
-  font-family: OpensansBold;
-  font-size: 16px;
-  line-height: 16px;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #444444;
-  border: 2px solid #434343;
-}
 .header {
   position: relative;
   min-height: 78px;
