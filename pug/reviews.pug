@@ -1,7 +1,7 @@
 mixin reviews
   include btn
   .reviews
-    .content
+    .content.reviews__wrap
       H2.reviews__title Отзывы
 
       P.reviews__text Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!
@@ -9,8 +9,10 @@ mixin reviews
       .reviews__author
         B.reviews__author-name Анастасия Красильникова
         SPAN.reviews__author-address @misssssiskras
-        
-      BUTTON.reviews__prev(type='button')
-      BUTTON.reviews__next(type='button')
+      .reviews__nav  
+        BUTTON.reviews__nav-prev(type='button')
+          IMG(src="../static/img/icon-left-arrow.svg")
+        BUTTON.reviews__nav-next(type='button')
+          IMG(src="../static/img/icon-right-arrow.svg")
       +btn({href:'#'}).reviews__write
         | Написать
