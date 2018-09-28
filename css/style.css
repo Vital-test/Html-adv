@@ -328,7 +328,7 @@ template {
 }
 @media (min-width: 1150px) {
   .content {
-    max-width: 1150px;
+    max-width: 1050px;
     margin: 0 auto;
     padding: 0 50px;
   }
@@ -347,6 +347,13 @@ template {
   text-transform: uppercase;
   color: #444444;
   border: 2px solid #434343;
+}
+.btn:hover {
+  color: #fff;
+  background-color: #444444;
+}
+.btn:active span {
+  opacity: .3;
 }
 .header {
   position: relative;
@@ -859,6 +866,7 @@ template {
   .weeks-product__head-title {
     width: auto;
     margin-bottom: 27px;
+    margin-left: -4px;
     font-size: 40px;
     line-height: 50px;
   }
@@ -898,6 +906,51 @@ template {
   .weeks-product__wrap {
     width: 810px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 1150px) {
+  .weeks-product {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1050px;
+    margin: 0 auto;
+    margin-top: 85px;
+    margin-bottom: 74px;
+  }
+  .weeks-product__wrap {
+    width: 878px;
+    padding-right: 0;
+    margin: 0;
+  }
+  .weeks-product__head {
+    position: relative;
+    z-index: 2;
+  }
+  .weeks-product__head-title {
+    font-size: 50px;
+    line-height: 57px;
+    order: 2;
+  }
+  .weeks-product__head-mark {
+    position: absolute;
+    left: -123px;
+  }
+  .weeks-product__text {
+    width: 300px;
+    margin-bottom: 43px;
+    font-size: 16px;
+  }
+  .weeks-product__properties {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  .weeks-product__properties tr {
+    padding-top: 8px;
+    padding-bottom: 9px;
+  }
+  .weeks-product__order-price {
+    margin-top: 82px;
+    font-size: 18px;
   }
 }
 .about {
