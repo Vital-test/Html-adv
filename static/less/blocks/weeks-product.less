@@ -70,6 +70,7 @@
 	.weeks-product {
 		padding: 0;
 		&__wrap {
+			position: relative;
 			width: auto;
 			min-width: 670px;
 			margin: 0 50px;
@@ -79,12 +80,47 @@
 		width: 100%;
 		flex-direction: row;
 		justify-content: space-between;
+		&-title {
+			width: auto;
+			margin-bottom: 27px;
+			font-size: 40px;
+			line-height: 50px;
+		}
 		&-mark {
+			align-self: center;
 			width: 70px;
+			margin-right: 30px;
 			text-align: center;
 		}
 	}
 	.weeks-product__text {
 		width: 260px;
+		margin-top: 0;
+		line-height: 30px;
+	}
+	.weeks-product__properties {
+		margin-top: 37px;
+	}
+	.weeks-product__pict {
+		position: absolute;
+		right: 0;
+		bottom: -6px;
+	}
+	.weeks-product__order {
+		width: 260px;
+		align-items: center;
+		&-price {
+			margin-top: 28px;
+			margin-bottom: 33px;
+		}
+		&-btn {
+			padding-bottom: 16px;
+		}
+	}
+}
+@media @tablet2-widths {
+	.weeks-product__wrap {
+		width: 810px;
+		margin: 0 auto;
 	}
 }
