@@ -152,12 +152,8 @@
     flex-wrap: wrap;
   }
   .header__menu-logo {
-    &:hover {
-      opacity: .6;
-    }
-    &:active {
-      opacity: .2;
-    }
+    .hover(.6);
+    .active(.2);
   }
   .header__menu-item {
     border: none;
@@ -299,12 +295,8 @@
     font-size: 14px;
     &-news,
     &-sell {
-      &:hover {
-        opacity: .6;
-      }
-      &:active {
-        opacity: .3;
-      }
+      .hover(.6);
+      .active(.3);
     }
    }
   }
