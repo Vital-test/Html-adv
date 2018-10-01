@@ -1198,16 +1198,80 @@ template {
   }
   .reviews__wrap {
     padding: 0;
-    padding-left: 125px;
+    padding-left: 90px;
   }
 }
 .contacts {
+  display: flex;
+  flex-direction: column;
   font-size: 14px;
   line-height: 30px;
   font-family: opensans;
   color: #444444;
   color: #000;
   background: #fff;
+}
+.contacts__wrap {
+  width: 260px;
+  margin: 0 auto;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.contacts__head {
+  display: flex;
+}
+.contacts__head-title {
+  font-family: VerdanaBold;
+  font-size: 24px;
+  line-height: 30px;
+}
+.contacts__head-mark {
+  display: none;
+}
+.contacts__data {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.contacts__data-mail {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  margin-bottom: 31px;
+}
+.contacts__data-mail a {
+  margin-right: 17px;
+  text-decoration: none;
+  color: #444;
+}
+.contacts__data-mail a::after {
+  display: block;
+  content: "";
+  height: 1px;
+  width: 154px;
+  margin-top: -3px;
+  background-color: #62d1ba;
+}
+.contacts__data-address {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+}
+.contacts__data-address p {
+  margin: 0;
+}
+.contacts__map {
+  height: 457px;
+  width: 320px;
+  margin: 0 auto;
+  margin-bottom: 39px;
+  background: url(../static/img/map-tablet@1x.jpg) no-repeat 50% 50%;
+}
+.contacts__btn {
+  max-width: 320px;
+  padding-left: 58px;
+  padding-right: 58px;
+  margin: 0 auto;
 }
 .page-footer {
   font-size: 18px;
