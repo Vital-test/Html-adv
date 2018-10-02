@@ -1208,7 +1208,6 @@ template {
   line-height: 30px;
   font-family: opensans;
   color: #444444;
-  color: #000;
   background: #fff;
 }
 .contacts__wrap {
@@ -1224,6 +1223,7 @@ template {
   font-family: VerdanaBold;
   font-size: 24px;
   line-height: 30px;
+  color: #000;
 }
 .contacts__head-mark {
   display: none;
@@ -1261,17 +1261,100 @@ template {
   margin: 0;
 }
 .contacts__map {
+  display: flex;
+  justify-content: center;
   height: 457px;
   width: 320px;
   margin: 0 auto;
   margin-bottom: 39px;
   background: url(../static/img/map-tablet@1x.jpg) no-repeat 50% 50%;
 }
+.contacts__map-pin {
+  margin-right: 8px;
+  margin-bottom: 30px;
+}
 .contacts__btn {
   max-width: 320px;
   padding-left: 58px;
   padding-right: 58px;
   margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .contacts {
+    margin-top: 26px;
+  }
+  .contacts__wrap {
+    width: auto;
+    margin: 0 50px;
+    padding: 0;
+  }
+  .contacts__head {
+    margin-bottom: 19px;
+    justify-content: space-between;
+  }
+  .contacts__head-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .contacts__head-mark {
+    display: block;
+  }
+  .contacts__data {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 54px;
+    font-size: 16px;
+  }
+  .contacts__data-mail a {
+    margin-right: 0;
+  }
+  .contacts__data-address {
+    width: 290px;
+  }
+  .contacts__map {
+    width: 768px;
+  }
+  .contacts__map-pin {
+    margin-right: 0;
+  }
+}
+@media (min-width: 910px) {
+  .contacts__wrap {
+    width: 810px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts {
+    position: relative;
+    width: 1050px;
+    margin: 0 auto;
+  }
+  .contacts__head {
+    position: relative;
+    width: 290px;
+  }
+  .contacts__head-mark {
+    position: absolute;
+    top: 25px;
+    left: -108px;
+  }
+  .contacts__data {
+    flex-direction: column;
+  }
+  .contacts__map {
+    position: absolute;
+    width: 525px;
+    right: 0;
+    background: url(../static/img/map-desktop@1x.jpg) no-repeat 50% 50%;
+  }
+  .contacts__btn {
+    max-width: 230px;
+    margin: 0;
+    margin-left: auto;
+    padding-right: 45px;
+    padding-left: 43px;
+  }
 }
 .page-footer {
   font-size: 18px;
