@@ -1092,6 +1092,11 @@ template {
   line-height: 24px;
   color: #000;
 }
+.reviews__author-address {
+  width: 120px;
+  text-decoration: none;
+  color: #444;
+}
 .reviews__nav {
   height: 50px;
   margin-top: 29px;
@@ -1150,7 +1155,7 @@ template {
   }
   .reviews__nav {
     position: absolute;
-    right: 28px;
+    right: 0;
     bottom: 30px;
     width: 175px;
   }
@@ -1168,7 +1173,7 @@ template {
   }
   .btn__reviews {
     position: absolute;
-    right: 30px;
+    right: 0;
     top: 83px;
     padding-right: 41px;
     padding-left: 41px;
@@ -1197,8 +1202,9 @@ template {
     line-height: 57px;
   }
   .reviews__wrap {
+    width: 878px;
     padding: 0;
-    padding-left: 90px;
+    margin-right: 0;
   }
 }
 .contacts {
@@ -1327,12 +1333,25 @@ template {
 @media (min-width: 1150px) {
   .contacts {
     position: relative;
+    min-height: 460px;
     width: 1050px;
     margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 102px;
+  }
+  .contacts__wrap {
+    width: 878px;
+    margin-right: 0;
   }
   .contacts__head {
     position: relative;
     width: 290px;
+    margin-bottom: 7px;
+  }
+  .contacts__head-title {
+    margin-top: 70px;
+    font-size: 50px;
+    line-height: 57px;
   }
   .contacts__head-mark {
     position: absolute;
@@ -1346,12 +1365,18 @@ template {
     position: absolute;
     width: 525px;
     right: 0;
+    padding-left: 13px;
     background: url(../static/img/map-desktop@1x.jpg) no-repeat 50% 50%;
+  }
+  .contacts__map-pin {
+    margin-bottom: 28px;
   }
   .contacts__btn {
     max-width: 230px;
     margin: 0;
-    margin-left: auto;
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: 172px;
     padding-right: 45px;
     padding-left: 43px;
   }

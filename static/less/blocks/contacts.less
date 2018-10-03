@@ -136,12 +136,25 @@
 @media @desktop-widths {
 	.contacts {
 		position: relative;
+		min-height: 460px;
 		width: 1050px;
 		margin: 0 auto;
+		margin-top: 70px;
+		margin-bottom: 102px;
+		&__wrap {
+			width: 878px;
+			margin-right: 0;
+		}
 	}
 	.contacts__head {
 		position: relative;
 		width: 290px;
+		margin-bottom: 7px;
+		&-title {
+			margin-top: 70px;
+			font-size: 50px;
+			line-height: 57px;
+		}
 		&-mark {
 			position: absolute;
 			top: 25px;
@@ -157,13 +170,19 @@
 		position: absolute;
 		width: 525px;
 		right: 0;
+		padding-left: 13px;
 		background: url(../static/img/map-desktop@1x.jpg) no-repeat 50% 50%;
+		&-pin {
+			margin-bottom: 28px;
+		}
 	}
 
 	.contacts__btn {
 		max-width: 230px;
 		margin: 0;
-		margin-left: auto;
+		margin-top: auto;
+		margin-right: auto;
+		margin-left: 172px;
 		padding-right: 45px;
 		padding-left: 43px;
 	}
