@@ -1210,6 +1210,7 @@ template {
 .contacts {
   display: flex;
   flex-direction: column;
+  margin-bottom: 39px;
   font-size: 14px;
   line-height: 30px;
   font-family: opensans;
@@ -1288,6 +1289,7 @@ template {
 @media (min-width: 768px) {
   .contacts {
     margin-top: 26px;
+    margin-bottom: 57px;
   }
   .contacts__wrap {
     width: auto;
@@ -1319,6 +1321,7 @@ template {
   }
   .contacts__map {
     width: 768px;
+    margin-bottom: 55px;
   }
   .contacts__map-pin {
     margin-right: 0;
@@ -1382,10 +1385,90 @@ template {
   }
 }
 .page-footer {
+  min-height: 142px;
   font-size: 18px;
   font-family: VerdanaBold;
   background: #f1f1f1;
   color: #000;
+}
+.page-footer__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 160px;
+  width: 260px;
+  margin: 0 auto;
+}
+.page-footer__logo {
+  display: none;
+}
+.page-footer__social {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 141px;
+  padding-top: 24px;
+  padding-bottom: 28px;
+}
+.page-footer__social-link {
+  font-size: 0;
+}
+.page-footer__copyright {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+  width: 100%;
+  border-top: 1px solid #e5e5e5;
+}
+.page-footer__copyright-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 182px;
+  text-decoration: none;
+  color: #444;
+}
+@media (min-width: 768px) {
+  .page-footer__wrap {
+    width: auto;
+    margin: 0 50px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .page-footer__logo {
+    display: block;
+  }
+  .page-footer__logo:hover svg path {
+    fill: #45c1ae;
+  }
+  .page-footer__logo:active {
+    opacity: 0.3;
+  }
+  .page-footer__social {
+    margin-left: 82px;
+  }
+  .page-footer__social-link:hover svg path {
+    fill: #45c1ae;
+  }
+  .page-footer__social-link:active {
+    opacity: 0.3;
+  }
+  .page-footer__copyright {
+    width: 182px;
+    padding: 0;
+    border-top: none;
+  }
+  .page-footer__copyright:hover svg path {
+    fill: #45c1ae;
+  }
+  .page-footer__copyright:active {
+    opacity: 0.3;
+  }
+}
+@media (min-width: 1150px) {
+  .page-footer__wrap {
+    margin: 0 auto;
+  }
 }
 .page-title {
   min-height: 177px;
