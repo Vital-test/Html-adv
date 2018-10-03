@@ -1,18 +1,23 @@
 mixin weeks-product
   include btn
-  - var values = [{name:'Цвет:', value:'&laquo;Тифани&raquo;/серый'}, {name:'Диаметр:', value:'25 см'}, {name:'Высота', value:'15 см'}];
+  - var values = [{name:'Цвет:', value:'&laquo;Тиффани&raquo;/серый'}, {name:'Диаметр:', value:'25 см'}, {name:'Высота:', value:'15 см'}];
   .weeks-product
-    .content
-      H2.weeks-product__title Вязаные корзинки
-      span.weeks-product__mark Товар недели
-      P.weeks-product__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах
+    .content.weeks-product__wrap
+      .weeks-product__head
+        H2.weeks-product__head-title Вязаные корзинки
+        span.weeks-product__head-mark Товар недели
+      P.weeks-product__text Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.
       TABLE.weeks-product__properties
         each row in values
           TR
-            TD.weeks-product__name= row.name
-            TD.weeks-product__value!= row.value
-      IMG(src="../static/img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки")
+            TD.weeks-product__properties-name= row.name
+            TD.weeks-product__properties-value!= row.value
+      PICTURE.weeks-product__pict
+        SOURCE(media = "(min-width: 1150px)" srcset = "../static/img/triple-set-desktop.jpg")
+        SOURCE(media = "(min-width: 768px)" srcset = "../static/img/triple-set-tablet.jpg")
+        IMG(src="../static/img/triple-set-mobile@1x.jpg" alt="Вязаные корзинки")
       .weeks-product__order
-        SPAN.weeks-product__price Цена: 990 руб.
-        +btn({href:'#'}).weeks-product__btn
-          | Заказать
+        SPAN.weeks-product__order-price Цена: 990 руб.
+        +btn({href:'#'}).weeks-product__order-btn
+          SPAN Заказать
+  IMG.zigzag-wave(src="../static/img/wavy-line.svg")

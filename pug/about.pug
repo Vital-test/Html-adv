@@ -1,10 +1,10 @@
 mixin about
-  - var items = [{src:'../static/img/icon-feature-1.svg', text:'Экологически чистые материалы'},{src:'../static/img/icon-feature-2.svg', text:'Скандинавский стиль по российской цене'}, {src:'../static/img/icon-feature-3.svg', text:'Увеличивает лайки на фотографиях'},{src:'../static/img/icon-feature-4.svg', text:'Связано вручную с любовью и умилением'},{src:'../static/img/icon-feature-5.svg', text:'Поддержка отечественного производителя'},{src:'../static/img/icon-feature-6.svg', text:'Поставляется в подарочной упаковке'}];
+  - var items = [{src:'../static/img/icon-feature-1.svg', text:'Экологически чистые материалы', itemName:'about__item-1'},{src:'../static/img/icon-feature-3.svg', text:'Скандинавский стиль по российской цене', itemName:'about__item-2'}, {src:'../static/img/icon-feature-5.svg', text:'Увеличивает лайки на фотографиях', itemName:'about__item-3'},{src:'../static/img/icon-feature-2.svg', text:'Связано вручную с любовью и умилением', itemName:'about__item-4'},{src:'../static/img/icon-feature-4.svg', text:'Поддержка отечественного производителя', itemName:'about__item-5'},{src:'../static/img/icon-feature-6.svg', text:'Поставляется в подарочной упаковке', itemName:'about__item-6'}];
   .about
-    .content
+    .content.about__wrap
       H2.about__title Коротко о нас:
       UL.about__list
         each rows in items
-          LI.about__item
+          LI.about__item(class = rows.itemName)
             IMG(src=rows.src)
-            = rows.text
+            SPAN= rows.text

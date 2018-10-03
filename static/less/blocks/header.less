@@ -1,4 +1,5 @@
 .header {
+  position: relative;
   min-height: 78px;
   min-width: 320px;
   font-size: 16px;
@@ -6,6 +7,7 @@
   line-height: 24px;
   color: #000;
   background: #fff;
+  z-index: 2;
 }
 
 .header__menu-list,
@@ -150,12 +152,8 @@
     flex-wrap: wrap;
   }
   .header__menu-logo {
-    &:hover {
-      opacity: .6;
-    }
-    &:active {
-      opacity: .2;
-    }
+    .hover(.6);
+    .active(.2);
   }
   .header__menu-item {
     border: none;
@@ -297,12 +295,8 @@
     font-size: 14px;
     &-news,
     &-sell {
-      &:hover {
-        opacity: .6;
-      }
-      &:active {
-        opacity: .3;
-      }
+      .hover(.6);
+      .active(.3);
     }
    }
   }

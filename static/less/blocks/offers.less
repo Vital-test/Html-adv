@@ -1,10 +1,11 @@
 .offers {
 	position: relative;
-	height: 453px;
+	height: 440px;
 	min-width: 320px;
 	padding-top: 67px;
 	font-family: VerdanaBold;
 	background: url(../static/img/hero-mobile@1x.jpg) no-repeat 50% 0;
+	background-color: #f9f9f9;
 }
 
 .offers__wrap {
@@ -29,6 +30,7 @@
 	display: flex;
 	flex-direction: column;
 	min-width: 320px;
+	margin: 0;
 	list-style-type: none;
 	padding: 0;
 	a {
@@ -42,7 +44,7 @@
 	&-interier {
 		display: flex;
 		justify-content: space-between;
-		padding: 20.5px 35px 20.5px 30px;
+		padding: 20.5px 36px 20.5px 30px;
 		background-color: #63d1bb;
 		svg path {
 			fill: #3bb09d;
@@ -51,7 +53,7 @@
 	&-toys {
 		display: flex;
 		justify-content: space-between;
-		padding: 22px 35px 22px 30px;
+		padding: 22px 27px 22px 30px;
 		background-color: #56c3b2;
 		svg path {
 			fill: #35a999;
@@ -62,33 +64,87 @@
 		line-height: 24px;
 	}
 }
+.zigzag {
+	display: none;
+}
 
 @media @tablet-widths {
 	.offers {
-		height: 745px;
+		height: 616px;
 		padding-top: 130px;
 		background: url(../static/img/hero-desktop.jpg) no-repeat 50% 0;
+		background-color: #f9f9f9;
 	}
 	
-	.offers__title {
-		&-text {
-			width: 500px;
-			font-size: 40px;
-			line-height: 50px;
-		}
+	.offers__title-text {
+		width: 500px;
+		font-size: 40px;
+		line-height: 50px;
 	}
 
 	.offers__list {
 		flex-direction: row;
+		flex-wrap: wrap;
+		width: 100%;
+		max-width: 810px;
+		margin: 0 auto;
+		margin-bottom: -7px;
 	}
 	.offers__item {
 		width: 50%;
+		&-interier {
+			padding-bottom: 25px;
+			padding-left: 36px;
+			transition: all .2s ease-out;
+			&:hover {
+				margin-top: -5px;
+				padding-bottom: 30px;
+				background-color: #58d5bc;
+			}
+			&:hover svg path {
+				fill: #28a591;
+			}
+			&:active span,
+			&:active svg path {
+				opacity: .3;
+			}
+		}
+		&-toys {
+			padding-right: 34px;
+			padding-bottom: 26.5px;
+			padding-left: 36px;
+			transition: all .2s ease-out;
+			&:hover {
+				margin-top: -5px;
+				padding-bottom: 31.5px;
+				background-color: #45c1ae;
+			}
+			&:hover svg path {
+				fill: #229f8d;
+			}
+			&:active span,
+			&:active svg path {
+				opacity: .3;
+			}
+		}
 	}
 	.zigzag {
-		position: absolute;
-		bottom: 0;
-		img {
-			width: 100%;
-		}
+		display: block;
+		margin-top: -15px;
+		overflow: hidden;
+	}
+}
+
+@media @desktop-widths {
+	.offers {
+		padding-top: 133px;
+	}
+	.offers__title-text {
+		width: 625px;
+		font-size: 50px;
+		line-height: 57px;
+	}
+	.offers__list {
+		max-width: 1150px;
 	}
 }

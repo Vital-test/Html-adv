@@ -6,7 +6,7 @@
 	}
 
 	@media @desktop-widths {
-		max-width: 1150px;
+		max-width: 1050px;
 		margin: 0 auto;
 		padding: 0 50px;
 	}
@@ -14,4 +14,19 @@
 .flexed {
 	display: flex;
 	flex-direction: column;
+}
+.hover(@_opacity) {
+	&:hover {
+		opacity: @_opacity;
+	}
+}
+.active(@_opacity) {
+	&:active {
+		opacity: @_opacity;
+	}
+}
+.hover-svg(@_fill) {
+	&:hover svg path {
+		fill: @_fill;
+	}
 }

@@ -1,6 +1,150 @@
 .reviews {
+	margin-top: 58px;
+	margin-bottom: 53px;
 	font-size: 14px;
 	line-height: 30px;
 	font-family: opensans;
 	color: rgb(68,68,68);
+	&__wrap {
+		width: 260px;
+		padding-left: 30px;
+		padding-right: 30px;
+		margin: 0 auto;
+	}
+}
+
+.reviews__title {
+	font-family: VerdanaBold;
+	font-size: 24px;
+	line-height: 30px;
+	color: #000;
+}
+
+.reviews__author {
+	display: flex;
+	flex-direction: column;
+	&-name {
+		font-family: VerdanaBold;
+		font-size: 14px;
+		line-height: 24px;
+		color: #000;
+	}
+	&-address {
+		width: 120px;
+		text-decoration: none;
+		color: #444;
+	}
+}
+.reviews__nav {
+	height: 50px;
+	margin-top: 29px;
+	margin-bottom: 53px;
+	button {
+		height: 100%;
+		width: 50%;
+		background-color: #fff;
+		outline: none;
+		cursor: pointer;
+	}
+	&-prev {
+		border: 1px solid #ebebeb;
+	}
+	&-next {
+		border: 1px solid #ebebeb;
+		border-left-width: 0;
+	}
+}
+.btn__reviews {
+	padding-top: 12px;
+	padding-bottom: 14px;
+}
+
+@media @tablet-widths {
+	.reviews {
+		display: flex;
+		min-height: 460px;
+		margin-bottom: 68px;
+		background: url(../static/img/review@1x.jpg) no-repeat 0 0;
+		&__wrap {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			width: 100%;
+			padding-left: 0;
+			padding-right: 0;
+			margin: 0 50px;
+			margin-right: 20px;
+		}
+		&__title {
+			margin-top: 74px;
+			margin-bottom: 52px;
+			font-size: 40px;
+			line-height: 50px;
+		}
+		&__text {
+			width: 700px;
+			margin-bottom: 11px;
+			font-size: 16px;
+		}
+	}
+	.reviews__author {
+		&-name,
+		&-address {
+			font-size: 16px;
+		}
+	}
+	.reviews__nav {
+		position: absolute;
+		right: 0;
+		bottom: 30px;
+		width: 175px;
+		button {
+			.hover(.6);
+			.active(.3);
+		}
+		&-prev {
+			border: none;
+		}
+		&-next {
+			border: none;
+		}
+	}
+	.btn__reviews {
+		position: absolute;
+		right: 0;
+		top: 83px;
+		padding-right: 41px;
+		padding-left: 41px;
+	}
+}
+
+@media @tablet2-widths {
+	.reviews {
+		width: auto;
+		margin: 0 auto;
+		margin-top: 58px;
+		margin-bottom: 68px;
+		&__wrap {
+			width: 810px;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media @desktop-widths {
+	.reviews {
+		width: 1050px;
+		margin-bottom: 65px;
+		&__title {
+			margin-bottom: 35px;
+			font-size: 50px;
+			line-height: 57px;
+		}
+		&__wrap {
+			width: 878px;
+			padding: 0;
+			margin-right: 0;
+		}
+	}
 }
