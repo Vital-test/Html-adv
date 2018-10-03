@@ -358,7 +358,7 @@ template {
 .header {
   position: relative;
   min-height: 78px;
-  min-width: 320px;
+  width: 100%;
   font-size: 16px;
   font-family: VerdanaBold;
   line-height: 24px;
@@ -423,7 +423,7 @@ template {
   transform: rotate(-45deg);
 }
 .header__menu-logo {
-  padding: 17.5px 0;
+  padding: 18px 0;
   display: flex;
   justify-content: center;
   border-bottom: 1px solid #ebebeb;
@@ -476,7 +476,7 @@ template {
   .header {
     max-width: 100%;
     height: 88px;
-    border-bottom: 1px solid #ebebeb;
+    border-bottom: 1px solid #dfdfdf;
   }
   .header__menu-toggle {
     display: none;
@@ -493,6 +493,9 @@ template {
     display: flex;
     justify-content: flex-end;
     flex-grow: 1;
+  }
+  .header__menu-logo {
+    border-bottom: 1px solid #dfdfdf;
   }
   .header__menu-logo:hover {
     opacity: 0.6;
@@ -531,8 +534,8 @@ template {
   }
   .header__menu-item-search {
     padding: 32px;
-    border-left: 1px solid #ebebeb;
-    border-right: 1px solid #ebebeb;
+    border-left: 1px solid #ececec;
+    border-right: 1px solid #ececec;
   }
   .header__menu-item-search svg {
     margin-left: 0;
@@ -1471,12 +1474,19 @@ template {
   }
 }
 .page-title {
-  min-height: 177px;
-  border-top: 1px solid #ebebeb;
-  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 176px;
+  width: 100%;
   font-family: VerdanaBold;
   text-align: center;
   background: #f1f1f1;
+}
+.page-title__title {
+  margin: 0;
+  font-size: 24px;
+  line-height: 30px;
 }
 .order {
   font-family: VerdanaBold;
