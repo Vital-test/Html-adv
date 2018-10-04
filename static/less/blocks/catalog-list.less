@@ -1,4 +1,39 @@
 .catalog-list {
+	margin-top: 30px;
 	font-family: VerdanaBold;
-    color: #000;	
+    color: #000;
+    &__wrap {
+    	width: 261px;
+    	margin: 0 auto;
+    }	
+}
+
+@media @tablet-widths {
+	.catalog-list {
+		margin-top: 81px;
+		&__wrap {
+			width: 89%;
+		}
+	}
+}
+
+@media @tablet2-widths {
+	.catalog-list {
+		&__wrap {
+			width: 810px;
+		}
+	}
+}
+
+@media @desktop-widths {
+	.catalog-list {
+		margin-top: 130px;
+		margin-bottom: 3px;
+		&__wrap {
+			display: flex;
+			justify-content: space-between;
+			padding: 0;
+			width: 1050px;
+		}
+	}
 }

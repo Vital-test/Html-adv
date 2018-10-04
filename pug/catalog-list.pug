@@ -1,10 +1,9 @@
 mixin catalog-list
 
   include catalog-item
-
-  -var cat_list = [{src:'1',alth1:'Зайчик-попрыгайчик',det:'Рост 30 см, вес 200 г',prc:'1 200 руб.'},{src:'2',alth1:'Корзинка для белья',det:'Диаметр 15 см, высота 10 см',prc:'690 руб.'},{src:'3',alth1:'Большая корзинка для игрушек',det:'Диаметр 30 см, высота 30 см',prc:'1 500 руб.'}];
+  -var cat_list = [{_setdesk:'../static/img/photo-1-desktop@1x.jpg',_settabl:'../static/img/photo-1-tablet@1x.jpg', src:'../static/img/photo-1-mobile@1x.jpg',alth1:'Зайчик-попрыгайчик',det:'Рост 30 см, вес 200 г',prc:'1 200 руб.'},{_setdesk:'../static/img/photo-2-desktop@1x.jpg',_settabl:'../static/img/photo-2-tablet@1x.jpg', src:'../static/img/photo-2-mobile@1x.jpg',alth1:'Корзинка для белья',det:'Диаметр 15 см, высота 10 см',prc:'690 руб.'},{_setdesk:'../static/img/photo-3-desktop@1x.jpg',_settabl:'../static/img/photo-3-tablet@1x.jpg', src:'../static/img/photo-3-mobile@1x.jpg',alth1:'Большая корзинка для игрушек',det:'Диаметр 30 см, высота 30 см',prc:'1 500 руб.'}];
 
   .catalog-list
-    .content
+    .content.catalog-list__wrap
       each catitem in cat_list
-        +catalog-item({source:catitem.src,alter:catitem.alth1,title:catitem.alth1,details:catitem.det,price:catitem.prc})
+        +catalog-item({setdesk:catitem._setdesk, settabl:catitem._settabl, source:catitem.src, alter:catitem.alth1, title:catitem.alth1, details:catitem.det, price:catitem.prc})
