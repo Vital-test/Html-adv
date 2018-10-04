@@ -3,14 +3,14 @@ mixin process
   include btn
 
   .process
-    .content
+    .content.process__wrap
       .process__title
-        IMG(src='#')
-        H3 Процесс производства
-      IMG(src='' alt='Процесс производства')
+        IMG.process__title-icon(src='../static/img/icon-video.svg')
+        H3.process__title-name Процесс производства
+      IMG(src='../static/img/video-mobile@1x.jpg' alt='Процесс производства')
 
-      P.process__about
-        | По просьбам наших любимых фоловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+      .process__about
+        P.process__about-text По просьбам наших любимых фоловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         
-      +btn({href:'#'}).process__btn
-        | Сделать заказ
+        +btn({href:'#'}).process__btn
+          | Сделать заказ

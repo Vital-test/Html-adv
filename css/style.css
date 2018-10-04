@@ -1651,3 +1651,7 @@ template {
   font-family: opensans;
   color: #000;
 }
+.process__wrap {
+  width: 260px;
+  margin: 0 auto;
+}
