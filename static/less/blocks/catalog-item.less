@@ -81,11 +81,19 @@
 				&-price-value {
 					opacity: .6;
 				}
-				&-price {
-					.hover-svg(#63d1bb);
-				}
 			} 
 		}
+		&:active {
+			.catalog-item__about {
+				box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.1);
+				&-title,
+				&-details,
+				&-price {
+					opacity: .3;
+				}
+			}
+		}
+		.hover-svg(#63d1bb);
 	}
 
 	.catalog-item__about {

@@ -7,10 +7,11 @@ mixin process
       .process__title
         IMG.process__title-icon(src='../static/img/icon-video.svg')
         H3.process__title-name Процесс производства
-      IMG(src='../static/img/video-mobile@1x.jpg' alt='Процесс производства')
 
+      .process__video
+        IMG.process__video-icon(src="../static/img/icon-play.svg")
       .process__about
         P.process__about-text По просьбам наших любимых фоловеров мы сняли для вас подробное видео о том, как появляются наши товары.
         
-        +btn({href:'#'}).process__btn
+        +btn({href:'#'}).process__about-btn
           | Сделать заказ
