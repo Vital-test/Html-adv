@@ -1,8 +1,51 @@
 .page-title {
-	min-height: 177px;
-	border-top: 1px solid #ebebeb;
-	box-sizing: border-box;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 176px;
+	width: 100%;
 	font-family: VerdanaBold;
 	text-align: center;
 	background: #f1f1f1;
+	&__title {
+		margin: 0;
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+.zigzag__after-page-title {
+		display: none;
+		position: absolute;
+		bottom: 0;
+	}
+
+
+@media @tablet-widths {
+	.page-title {
+		min-height: 223px;
+		&__title {
+			font-size: 40px;
+			line-height: 50px;
+		}
+	}
+	.zigzag__after-page-title {
+		display: block;
+		width: 100%;
+		bottom: -13px;
+	}
+}
+
+@media @desktop-widths {
+	.page-title {
+		min-height: 250px;
+		&__title {
+			font-size: 50px;
+			line-height: 57px;
+		}
+	}
+	.zigzag__after-page-title {
+		bottom: -22px;
+	}
 }
