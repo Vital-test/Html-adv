@@ -30,3 +30,13 @@
 		fill: @_fill;
 	}
 }
+.befafter {
+	content: "";
+	position: absolute;
+	display: block;
+}
+.checked() {
+	input:checked + label:after {
+		display: block;
+	}
+}

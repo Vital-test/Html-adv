@@ -11,39 +11,45 @@ mixin order
   -var it_contacts = [{sp:'Тел',type:'tel',src:'#',phdr:'+7 XXX XX XX'},{sp:'E-mail',type:'email',src:'#',phdr:'Мы не будем спамить, честно!'}];
 
   FORM.order
-    .content
-      P.order__about Мы будем рады воплотить в жизнь ваши пожелания!<br>Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+    .content.order__wrap
+      .order__about
+        P.order__about-text 
+          SPAN Мы будем рады воплотить в жизнь ваши пожелания!
+          SPAN  Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      .order__list
+        .order__item.order__item-type
+          SPAN.order__type-title Тип
+          each item in it_type
+            .order__item-type-turn
+              input(type='radio', name='type', value= item.id, id= item.id)
+              label(for=item.id)= item.lab
 
-      .order__type
-        SPAN Тип
-        each item in it_type
-          label(for=item.id)= item.lab
-          input(type='radio', name='type', value= item.id, id= item.id)
+        .order__item.order__item-color
+          SPAN.order__color-title Цвет
+          each item in it_color
+            .order__item-color-turn
+              input(type='checkbox', name='color', value= item.id , id= item.id)
+              label(for=item.id)!= item.lab
+        
+        .order__item.order__item-client
+          SPAN.order__client-title ФИО
+          each item in it_client
+            .order__item-client-turn
+              input(type='text', id= item.id)
+              label(for=item.id)= item.lab
 
-      .order__color
-        SPAN Цвет
-        each item in it_color
-          label(for=item.id)= item.lab
-          input(type='checkbox', name='color', value= item.id , id= item.id)
-      
-      .order__client
-        SPAN ФИО
-        each item in it_client
-          label(for=item.id)= item.lab
-          input(type='text', id= item.id)
+        .order__item.order__item-contacts
+          each item in it_contacts
+            SPAN= item.sp
+            input(type= item.type placeholder= item.phdr)
+            IMG(src= item.src)
 
-      .order__contacts
-        each item in it_contacts
-          SPAN= item.sp
-          input(type= item.type placeholder= item.phdr)
-          IMG(src= item.src)
+        .order__item.order__item-addit
+          SPAN.order__addit-title Доп
+          TEXTAREA(placeholder='Опишите все ваши пожелания к заказу')
 
-      .order__addit
-        SPAN Доп
-        TEXTAREA(placeholder='Опишите все ваши пожелания к заказу')
+        +btn({href:'#'}).order__btn
+            | Отправить заказ
 
-      +btn({href:'#'}).order__btn
-          | Отправить заказ
-
-      SPAN.order__necess
-        | Все поля являются обязательными
+        SPAN.order__necess
+          | Все поля являются обязательными

@@ -337,6 +337,11 @@ template {
   display: flex;
   flex-direction: column;
 }
+.befafter {
+  content: "";
+  position: absolute;
+  display: block;
+}
 .btn {
   max-width: 85px;
   padding: 15px 85px 17px 85px;
@@ -1525,6 +1530,113 @@ template {
   font-family: VerdanaBold;
   color: #000;
   background: #fff;
+}
+.order__wrap {
+  width: 260px;
+  margin: 0 auto;
+}
+.order__about-text {
+  font-family: Opensans;
+  font-size: 14px;
+  line-height: 25px;
+}
+.order__list span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 29px;
+  font-family: OpensansBold;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #63d1bb;
+}
+.order__list span::after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: 198px;
+  background-color: #63d1bb;
+}
+.order__list input[type="radio"],
+.order__list input[type="checkbox"] {
+  opacity: 0;
+  cursor: pointer;
+}
+.order__item {
+  display: flex;
+  flex-direction: column;
+}
+.order__item-type-turn,
+.order__item-color-turn {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: 41px;
+  width: 260px;
+  margin-bottom: 22px;
+}
+.order__item-type-turn label {
+  width: 160px;
+  padding-left: 45px;
+  font-size: 16px;
+  line-height: 18px;
+  cursor: pointer;
+}
+.order__item-type-turn label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 37px;
+  width: 37px;
+  border: 2px solid #000;
+  border-radius: 25px;
+}
+.order__item-type-turn label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  display: none;
+  top: 12px;
+  left: 12px;
+  height: 17px;
+  width: 17px;
+  background-color: #63d1bb;
+  border-radius: 10px;
+}
+.order__item-type-turn input:checked + label:after,
+.order__item-color-turn input:checked + label:after {
+  display: block;
+}
+.order__item-color-turn label {
+  padding-left: 45px;
+  cursor: pointer;
+}
+.order__item-color-turn label::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 37px;
+  width: 37px;
+  border: 2px solid #000;
+}
+.order__item-color-turn label::after {
+  content: "";
+  position: absolute;
+  display: block;
+  display: none;
+  left: 10px;
+  top: 15px;
+  height: 7px;
+  width: 22px;
+  border: 2px solid #000;
+  border-top-width: 0;
+  border-right-width: 0;
+  transform: rotate(-45deg);
 }
 .catalog-list {
   margin-top: 30px;
