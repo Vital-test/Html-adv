@@ -17,26 +17,32 @@ mixin order
           SPAN Мы будем рады воплотить в жизнь ваши пожелания!
           SPAN  Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
       .order__list
-        .order__item.order__item-type
-          SPAN.order__type-title Тип
-          each item in it_type
-            .order__item-type-turn
-              input(type='radio', name='type', value= item.id, id= item.id)
-              label(for=item.id)= item.lab
+        .order__item.order__item--type
+          .order__item-wrap
+            SPAN.order__title.order__title--type Тип
+            .order__turns.order__turns--type
+              each item in it_type
+                .order__turn-type
+                  input(type='radio', name='type', value= item.id, id= item.id)
+                  label(for=item.id)= item.lab
 
-        .order__item.order__item-color
-          SPAN.order__color-title Цвет
-          each item in it_color
-            .order__item-color-turn
-              input(type='checkbox', name='color', value= item.id , id= item.id)
-              label(for=item.id)!= item.lab
+        .order__item.order__item--color
+          .order__item-wrap
+            SPAN.order__title.order__title--color Цвет
+            .order__turns.order__turns--color
+              each item in it_color
+                .order__turn-color
+                  input(type='checkbox', name='color', value= item.id , id= item.id)
+                  label(for=item.id)!= item.lab
         
-        .order__item.order__item-client
-          SPAN.order__client-title ФИО
-          each item in it_client
-            .order__item-client-turn
-              input(type='text', id= item.id)
-              label(for=item.id)= item.lab
+        .order__item.order__item--client
+          .order__item-wrap
+            SPAN.order__title.order__title--client ФИО
+            .order__turns.order__turns--client
+              each item in it_client
+                .order__turn-client
+                  input(type='text', id= item.id)
+                  label(for=item.id)= item.lab
 
         .order__item.order__item-contacts
           each item in it_contacts

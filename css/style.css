@@ -1535,40 +1535,43 @@ template {
   width: 260px;
   margin: 0 auto;
 }
+.order__about {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
 .order__about-text {
   font-family: Opensans;
   font-size: 14px;
   line-height: 25px;
 }
-.order__list span {
+.order__item-wrap {
+  margin-bottom: 33px;
+}
+.order__title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 29px;
+  margin-bottom: 27px;
   font-family: OpensansBold;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   color: #63d1bb;
 }
-.order__list span::after {
+.order__title::after {
   content: "";
   display: block;
   height: 1px;
   width: 198px;
   background-color: #63d1bb;
 }
-.order__list input[type="radio"],
-.order__list input[type="checkbox"] {
+.order input[type="radio"],
+.order input[type="checkbox"] {
   opacity: 0;
   cursor: pointer;
 }
-.order__item {
-  display: flex;
-  flex-direction: column;
-}
-.order__item-type-turn,
-.order__item-color-turn {
+.order__turn-type,
+.order__turn-color {
   display: flex;
   position: relative;
   align-items: center;
@@ -1576,14 +1579,14 @@ template {
   width: 260px;
   margin-bottom: 22px;
 }
-.order__item-type-turn label {
+.order__turn-type label {
   width: 160px;
   padding-left: 45px;
   font-size: 16px;
   line-height: 18px;
   cursor: pointer;
 }
-.order__item-type-turn label::before {
+.order__turn-type label::before {
   content: "";
   position: absolute;
   display: block;
@@ -1594,7 +1597,7 @@ template {
   border: 2px solid #000;
   border-radius: 25px;
 }
-.order__item-type-turn label::after {
+.order__turn-type label::after {
   content: "";
   position: absolute;
   display: block;
@@ -1606,15 +1609,15 @@ template {
   background-color: #63d1bb;
   border-radius: 10px;
 }
-.order__item-type-turn input:checked + label:after,
-.order__item-color-turn input:checked + label:after {
+.order__turn-type input:checked + label:after,
+.order__turn-color input:checked + label:after {
   display: block;
 }
-.order__item-color-turn label {
+.order__turn-color label {
   padding-left: 45px;
   cursor: pointer;
 }
-.order__item-color-turn label::before {
+.order__turn-color label::before {
   content: "";
   position: absolute;
   display: block;
@@ -1624,7 +1627,7 @@ template {
   width: 37px;
   border: 2px solid #000;
 }
-.order__item-color-turn label::after {
+.order__turn-color label::after {
   content: "";
   position: absolute;
   display: block;
@@ -1637,6 +1640,91 @@ template {
   border-top-width: 0;
   border-right-width: 0;
   transform: rotate(-45deg);
+}
+@media (min-width: 768px) {
+  .order__wrap {
+    width: 100%;
+  }
+  .order__about {
+    margin-top: 70px;
+    margin-bottom: 58px;
+  }
+  .order__about-text {
+    display: flex;
+    flex-direction: column;
+    width: 670px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .order__item {
+    width: 100%;
+  }
+  .order__item-wrap {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 670px;
+    margin: 0 auto;
+  }
+  .order__title {
+    width: 65px;
+  }
+  .order__title::after {
+    display: none;
+  }
+  .order__turns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 500px;
+    margin-bottom: 40px;
+  }
+  .order__turn-type {
+    height: 52px;
+    width: 100%;
+  }
+  .order__turn-type label {
+    width: 100%;
+    padding-left: 67px;
+    font-size: 18px;
+  }
+  .order__turn-type label::before {
+    width: 48px;
+    height: 48px;
+    border-radius: 26px;
+  }
+  .order__turn-type label::after {
+    height: 21px;
+    width: 21px;
+    top: 15.5px;
+    left: 15.5px;
+  }
+  .order__item--color {
+    padding-top: 61px;
+    background-color: #f1f1f1;
+  }
+  .order__turn-color {
+    height: 52px;
+    width: 238px;
+    margin-bottom: 24px;
+  }
+  .order__turn-color label {
+    width: 100%;
+    padding-left: 67px;
+    font-size: 18px;
+  }
+  .order__turn-color label::before {
+    width: 48px;
+    height: 48px;
+  }
+  .order__turn-color label::after {
+    top: 18px;
+    left: 13px;
+    height: 10px;
+    width: 28px;
+  }
 }
 .catalog-list {
   margin-top: 30px;
