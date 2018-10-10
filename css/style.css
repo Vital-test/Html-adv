@@ -1641,6 +1641,82 @@ template {
   border-right-width: 0;
   transform: rotate(-45deg);
 }
+.order__item input[type='text']:-ms-input-placeholder,
+.order__item input[type='email']:-ms-input-placeholder,
+.order__item textarea:-ms-input-placeholder {
+  font-family: Verdana;
+  color: #444;
+  opacity: .3;
+}
+.order__item input[type='text']::placeholder,
+.order__item input[type='email']::placeholder,
+.order__item textarea::placeholder {
+  font-family: Verdana;
+  color: #444;
+  opacity: .3;
+}
+.order__title--client {
+  margin-bottom: 13px;
+}
+.order__turns--client input,
+.order__turns--contacts input {
+  width: 100%;
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+.order__turn-client label {
+  display: inline-block;
+  margin-top: 23px;
+  font-size: 16px;
+  line-height: 18px;
+}
+.order__title--tel {
+  padding-top: 3px;
+  margin-bottom: 10px;
+}
+.order__title--email {
+  margin-top: 42px;
+  margin-bottom: 8px;
+}
+.order__turn-contacts {
+  position: relative;
+}
+.order__turn-contacts svg {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+.order__item--addit {
+  margin-bottom: 53px;
+}
+.order__item--addit textarea {
+  height: 149px;
+  width: 100%;
+  padding-top: 15px;
+  padding-left: 15px;
+  resize: none;
+  border: 2px solid #000;
+  box-sizing: border-box;
+}
+.order__title--addit {
+  margin-bottom: 35px;
+}
+.order__necess {
+  display: none;
+}
+.order__btn {
+  display: inline-block;
+  max-width: 260px;
+  height: 55px;
+  width: 100%;
+  padding-top: 18px;
+  padding-right: 30px;
+  padding-bottom: 19px;
+  padding-left: 50px;
+  margin-bottom: 58px;
+  box-sizing: border-box;
+}
 @media (min-width: 768px) {
   .order__wrap {
     width: 100%;
@@ -1680,6 +1756,9 @@ template {
     justify-content: space-between;
     width: 500px;
     margin-bottom: 40px;
+  }
+  .order__turns--type {
+    margin-bottom: 30px;
   }
   .order__turn-type {
     height: 52px;
@@ -1724,6 +1803,33 @@ template {
     left: 13px;
     height: 10px;
     width: 28px;
+  }
+}
+@media (min-width: 1150px) {
+  .order__wrap {
+    max-width: 100%;
+    padding: 0;
+  }
+  .order__about {
+    margin-top: 121px;
+  }
+  .order__item-wrap {
+    justify-content: flex-start;
+    width: 930px;
+  }
+  .order__title {
+    margin-right: 44px;
+  }
+  .order__turns--color {
+    width: 760px;
+  }
+  .order__turn-type label:hover::before,
+  .order__turn-color label:hover::before {
+    border-color: #61d1b9;
+  }
+  .order__turn-type label:active::before,
+  .order__turn-color label:active::before {
+    border-color: #c6c6c6;
   }
 }
 .catalog-list {
