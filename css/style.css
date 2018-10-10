@@ -1647,6 +1647,7 @@ template {
   font-family: Verdana;
   color: #444;
   opacity: .3;
+  font-size: inherit;
 }
 .order__item input[type='text']::placeholder,
 .order__item input[type='email']::placeholder,
@@ -1654,6 +1655,7 @@ template {
   font-family: Verdana;
   color: #444;
   opacity: .3;
+  font-size: inherit;
 }
 .order__title--client {
   margin-bottom: 13px;
@@ -1686,6 +1688,7 @@ template {
   position: absolute;
   top: 10px;
   right: 0;
+  opacity: .3;
 }
 .order__item--addit {
   margin-bottom: 53px;
@@ -1702,10 +1705,10 @@ template {
 .order__title--addit {
   margin-bottom: 35px;
 }
-.order__necess {
+.order__btn-necess {
   display: none;
 }
-.order__btn {
+.order__btn-tap {
   display: inline-block;
   max-width: 260px;
   height: 55px;
@@ -1803,6 +1806,84 @@ template {
     left: 13px;
     height: 10px;
     width: 28px;
+  }
+  .order__item--client {
+    padding-top: 67px;
+  }
+  .order__turn-client {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 38px;
+    font-size: 18px;
+  }
+  .order__turn-client label {
+    margin-top: 0;
+    margin-right: 24px;
+    font-size: 18px;
+  }
+  .order__turn-client input {
+    flex-grow: 2;
+    padding-top: 0;
+    padding-bottom: 16px;
+    padding-left: 17px;
+  }
+  .order__item--contacts {
+    padding-top: 68px;
+    padding-bottom: 28px;
+    background-color: #f1f1f1;
+  }
+  .order__item-wrap--contacts {
+    flex-wrap: wrap;
+  }
+  .order__title--tel {
+    margin-right: 45px;
+  }
+  .order__turn-contacts input {
+    width: 500px;
+    padding-left: 18px;
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+  }
+  .order__turn-contacts svg {
+    right: 22px;
+  }
+  .order__turn-contacts .svg-phone {
+    right: 25px;
+  }
+  .order__item--addit {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 670px;
+    padding-top: 64px;
+    margin: 0 auto;
+  }
+  .order__title--addit {
+    margin-top: 17px;
+  }
+  .order__item--addit textarea {
+    width: 500px;
+  }
+  .order__btn {
+    display: flex;
+    justify-content: space-between;
+    width: 670px;
+    margin: 0 auto;
+    margin-top: 53px;
+  }
+  .order__btn-tap {
+    width: 230px;
+    padding: 0;
+    text-align: center;
+    padding-top: 18px;
+  }
+  .order__btn-necess {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: Opensans;
+    font-size: 16px;
+    line-height: 30px;
   }
 }
 @media (min-width: 1150px) {
