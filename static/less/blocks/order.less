@@ -41,6 +41,11 @@
 		opacity: 0;
 		cursor: pointer;
 	}
+	input,
+	textarea {
+		font-family: Verdana;
+		outline: none;
+	}
     &__turn-type,
     &__turn-color {
     	display: flex;
@@ -129,7 +134,7 @@
 		font-size: 16px;
 		line-height: 18px;
 	}
-	
+
 	&__title--tel {
 		padding-top: 3px;
 		margin-bottom: 10px;
@@ -140,6 +145,7 @@
 	}
 	&__turn-contacts {
 		position: relative;
+		font-size: 18px;
 		svg {
 			position: absolute;
 			top: 10px;
@@ -156,6 +162,7 @@
 		padding-top: 15px;
 		padding-left: 15px;
 		resize: none;
+		font-size: 18px;
 		border: 2px solid #000;
 		box-sizing: border-box;
 	}
@@ -365,7 +372,7 @@
 			width: 930px;
 		}
 		&__title {
-			margin-right: 44px;
+			margin-right: 48px;
 		}
 
 		&__turns--color {
@@ -375,6 +382,79 @@
 		&__turn-color label {
 			.hover-label();
 			.active-label();
+		}
+		&__turns--client {
+			width: 697px;
+		}
+		&__turn-client input:hover {
+			border-bottom-color: #61d1b9;
+		}
+		&__turn-contacts input:hover,
+		&__turn-contacts input:focus {
+			border-bottom-color: #61d1b9;
+		}
+		&__turn-contacts input:invalid {
+			border-bottom-color: #f0b0b0;
+		}
+		&__turn-contacts:hover svg path {
+			fill: #61d1b9;
+		}
+		&__turn-contacts:hover svg {
+			opacity: 1;
+		}
+		&__turn-contacts input:focus + svg path {
+			fill: #61d1b9;
+		}
+		&__turn-contacts input:focus + svg {
+			opacity: 1;
+		}
+		&__turn-client input:focus {
+			outline: none;
+			border-bottom-color: #61d1b9;
+		}
+		&__item-wrap--contacts {
+			position: relative;
+		}
+		&__title--tel {
+			padding-left: 10px;
+			margin-right: 38px;
+		}
+		&__title--email {
+			position: absolute;
+			bottom: 50px;
+			margin-top: 0;
+
+		}
+		&__turn-contacts svg {
+			top: -4px;
+		}
+		&__turns--contacts input {
+			width: 697px;
+			padding-top: 0;
+		}
+		&__turn-contacts-email {
+			margin-left: 113px;
+		}
+		&__item--addit {
+			justify-content: flex-start;
+			width: 930px;
+		}
+		&__item--addit textarea {
+			width: 697px;
+			&:hover,
+			&:focus {
+				border-color: #61d1b9;
+			}
+		}
+		&__btn {
+			width: 930px;
+			padding-right: 119px;
+			padding-left: 113px;
+			margin-top: 90px;
+			box-sizing: border-box;
+		}
+		&__btn-necess {
+			margin-top: 10px;
 		}
 	}
 }

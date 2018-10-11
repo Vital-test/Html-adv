@@ -1570,6 +1570,11 @@ template {
   opacity: 0;
   cursor: pointer;
 }
+.order input,
+.order textarea {
+  font-family: Verdana;
+  outline: none;
+}
 .order__turn-type,
 .order__turn-color {
   display: flex;
@@ -1683,6 +1688,7 @@ template {
 }
 .order__turn-contacts {
   position: relative;
+  font-size: 18px;
 }
 .order__turn-contacts svg {
   position: absolute;
@@ -1699,6 +1705,7 @@ template {
   padding-top: 15px;
   padding-left: 15px;
   resize: none;
+  font-size: 18px;
   border: 2px solid #000;
   box-sizing: border-box;
 }
@@ -1899,7 +1906,7 @@ template {
     width: 930px;
   }
   .order__title {
-    margin-right: 44px;
+    margin-right: 48px;
   }
   .order__turns--color {
     width: 760px;
@@ -1911,6 +1918,78 @@ template {
   .order__turn-type label:active::before,
   .order__turn-color label:active::before {
     border-color: #c6c6c6;
+  }
+  .order__turns--client {
+    width: 697px;
+  }
+  .order__turn-client input:hover {
+    border-bottom-color: #61d1b9;
+  }
+  .order__turn-contacts input:hover,
+  .order__turn-contacts input:focus {
+    border-bottom-color: #61d1b9;
+  }
+  .order__turn-contacts input:invalid {
+    border-bottom-color: #f0b0b0;
+  }
+  .order__turn-contacts:hover svg path {
+    fill: #61d1b9;
+  }
+  .order__turn-contacts:hover svg {
+    opacity: 1;
+  }
+  .order__turn-contacts input:focus + svg path {
+    fill: #61d1b9;
+  }
+  .order__turn-contacts input:focus + svg {
+    opacity: 1;
+  }
+  .order__turn-client input:focus {
+    outline: none;
+    border-bottom-color: #61d1b9;
+  }
+  .order__item-wrap--contacts {
+    position: relative;
+  }
+  .order__title--tel {
+    padding-left: 10px;
+    margin-right: 38px;
+  }
+  .order__title--email {
+    position: absolute;
+    bottom: 50px;
+    margin-top: 0;
+  }
+  .order__turn-contacts svg {
+    top: -4px;
+  }
+  .order__turns--contacts input {
+    width: 697px;
+    padding-top: 0;
+  }
+  .order__turn-contacts-email {
+    margin-left: 113px;
+  }
+  .order__item--addit {
+    justify-content: flex-start;
+    width: 930px;
+  }
+  .order__item--addit textarea {
+    width: 697px;
+  }
+  .order__item--addit textarea:hover,
+  .order__item--addit textarea:focus {
+    border-color: #61d1b9;
+  }
+  .order__btn {
+    width: 930px;
+    padding-right: 119px;
+    padding-left: 113px;
+    margin-top: 90px;
+    box-sizing: border-box;
+  }
+  .order__btn-necess {
+    margin-top: 10px;
   }
 }
 .catalog-list {

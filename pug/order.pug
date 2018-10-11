@@ -71,7 +71,7 @@ mixin order
                 SPAN.order__title.order__title--email= item.sp
                 .order__turns.order__turns--contacts
                   .order__turn-contacts
-                    input(type= item.type, placeholder= item.phdr)
+                    input.order__turn-contacts-email(type= item.type, placeholder= item.phdr)
                     svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', width='32px', height='32px', viewBox='0 0 32 32', enable-background='new 0 0 32 32', xml:space='preserve')
                       path(fill='#333333', d='M28,5H4C1.791,5,0,6.792,0,9v13c0,2.209,1.791,4,4,4h24c2.209,0,4-1.791,4-4V9\
                       C32,6.792,30.209,5,28,5z M2,10.25l6.999,5.25L2,20.75V10.25z M30,22c0,1.104-0.898,2-2,2H4c-1.103,0-2-0.896-2-2l7.832-5.875\
