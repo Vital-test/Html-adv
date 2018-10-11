@@ -30,3 +30,27 @@
 		fill: @_fill;
 	}
 }
+.befafter {
+	content: "";
+	position: absolute;
+	display: block;
+}
+.checked() {
+	input:checked + label:after {
+		display: block;
+	}
+}
+.hover-label() {
+	&:hover {
+		&::before {
+			border-color: #61d1b9;
+		}
+	}
+}
+.active-label() {
+	&:active {
+		&::before {
+			border-color: #c6c6c6;
+		}
+	}
+}
